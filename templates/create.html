@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+<html>
+	<head>
+		{% block scripts %}
+		<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+		<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename = 'create.js')}}"></script>
+		<script>
+			var data = {{data|tojson}}
+		</script>
+		<script>
+			$("#cover").validate({
+				rules: {
+		    		field: {
+		    			required: true,
+		      			url: true
+					}
+				}
+			}); 
+		</script>
+		{% endblock %}
+	</head>
+		
+
+	<body>
+		<div class="container">
+			{% block content %}
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10" id="title">Stephanie's Database of Books</div>
+				<div class="col-md-1"></div>
+			</div>
+
+			<div class="row padbox"></div>
+
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div id="newlink"></div>
+					<span class="mediumfont">Add a book:</span>
+					<div class="row bookformdiv">
+						<div class="col-md-6"><textarea class="bookform" id="booktitle" rows=1 placeholder="Book Title"></textarea></div>
+						<div class="col-md-6" id="w1"></div>
+					</div>
+
+					<div class="row bookformdiv">
+						<div class="col-md-6"><textarea class="bookform" id="author" rows=1 placeholder="Author"></textarea></div>
+						<div class="col-md-6" id="w2"></div>
+					</div>
+
+					<div class="row bookformdiv">
+						<div class="col-md-6"><textarea class="bookform" id="num_fans" rows=1 placeholder="# of Fans"></textarea></div>
+						<div class="col-md-6" id="w3"></div>
+					</div>
+
+					<div class="row bookformdiv">
+						<div class="col-md-6"><textarea class="bookform" id="topics" rows=1 placeholder="Topics"></textarea></div>
+						<div class="col-md-6" id="w4"></div>
+					</div>
+
+					<div class="row bookformdiv">
+						<div class="col-md-6"><textarea class="bookform" id="summary" rows=4 placeholder="Summary"></textarea></div>
+						<div class="col-md-6" id="w5"></div>
+					</div>
+
+					<div class="row bookformdiv">
+						<div class="col-md-6"><textarea class="bookform" id="cover" rows=1 placeholder="Book Cover Photo: as URL"></textarea></div>
+						<div class="col-md-6" id="w6"></div>
+					</div>
+
+					<div class="row bookformdiv">
+						<div class="col-md-6"><button class="formmarg btn btn-dark" id="submitnewbk">Submit</button></div>
+						<div class="col-md-6"></div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+			{% endblock %}
+		</div>
+	</body>
+</html>

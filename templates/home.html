@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+<html>
+	<head>
+		{% block scripts %}
+		<script type="text/javascript" src="{{ url_for('static', filename = 'home.js')}}"></script>
+		<script>
+			var data = {{data|tojson}}
+			var current_id = {{current_id|tojson}}
+		</script>
+		{% endblock %}
+
+	</head>
+
+	
+
+	<body>
+		<div class="container">
+			{% block content %}
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10" id="title">Stephanie's Database of Books</div>
+				<div class="col-md-1"></div>
+			</div>
+
+			<div class="row padbox"></div>
+
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="missionstmt"><span class="mediumfont">Welcome!</span>  This website is a short list of books for readers who are interested in <span class="boldfont">women writers, modern fiction, and Asian American literature</span> (with some British classics sprinkled in). <br><br> Sounds like you?  <span class="boldfont">Search for your next read</span> in the Nav Bar above, or browse the options below!</div>
+
+					<div class="row padbox"></div>
+
+					<div id="recententries">
+
+						<div class="card" style="width: 16rem;">
+						  <img class="card-img-top" src="..." alt="Cover photo">
+						  <div class="card-body">
+						    <h5 class="card-title">Title by Author</h5>
+						  </div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+			{% endblock %}
+		</div>
+	</body>
+</html>

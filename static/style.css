@@ -1,0 +1,118 @@
+img {
+	max-width: 100%;
+	height:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+textarea {
+	width:450px;
+}
+
+.left-space {
+	margin-left:20px;
+}
+
+.mediumfont {
+	font-size:24px;
+}
+
+.boldfont {
+	font-weight:bold;
+}
+
+.highlight {
+	background-color:#FFFF00;
+}
+
+.redfont {
+	color:red;
+}
+
+.padbox {
+	height:40px;
+}
+
+.edit {
+	margin-left:20px;
+}
+
+.topicblob {
+	margin:5px;
+	padding:10px;
+	background-color: #EEEEEE ;
+	border-radius:20px;
+}
+
+.mywidth {
+	width:100px;
+}
+
+.xfordelete {
+	font-weight:bold;
+}
+
+.xfordelete:hover {
+	cursor:pointer;
+}
+
+.undodelete {
+	font-weight:bold;
+	margin:5px;
+	padding:10px;
+	background-color: #FFD2D2 ;
+	border-radius:20px;
+}
+
+.undodelete:hover {
+	cursor:pointer;
+}
+
+.warning {
+	padding:5px;
+	background-color: #FFD2D2;
+	border-style:solid;
+	border-width:1px;
+	border-color:red;
+	border-radius:5px;
+}
+
+.bookformdiv {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.bookentry {
+	margin-left:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.delete {
+	margin-left:20px;
+}
+
+#title {
+	padding:40px;
+	font-size:48px;
+	background-color:#B5B4FF ;
+}
+
+#editnum {
+	margin-left: 30px; 
+}
+
+#newlink {
+	padding-top:30px;
+}
+
+#searchstr {
+	width:300px;
+	margin-right:20px;
+}
+
+#noresult {
+	margin-left:5px;
+	font-size: 20px;
+	color: #C1C1C1;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+<html>
+	<head>
+		{% block scripts %}
+		<script type="text/javascript" src="{{ url_for('static', filename = 'search.js')}}"></script>
+		<script>
+			var data = {{data|tojson}}
+			var searchval = {{searchval|tojson}}
+		</script>
+		{% endblock %}
+	</head>
+
+
+
+	<body>
+		<div class="container">
+			{% block content %}
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10" id="title">Stephanie's Database of Books</div>
+				<div class="col-md-1"></div>
+			</div>
+
+			<div class="row padbox"></div>
+
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div id="searchresults">
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+			{% endblock %}
+		</div>
+	</body>
+</html>
